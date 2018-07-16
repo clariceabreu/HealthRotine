@@ -1,0 +1,192 @@
+<!--
+  Generated template for the AddAppointmentPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>AddAppointment</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label>Date</ion-label>
+    <ion-select (ionChange)="dayChange($event)">
+      <ion-option selected="true" value="01">01</ion-option>
+      <ion-option value="02">02</ion-option>
+      <ion-option value="03">03</ion-option>
+      <ion-option value="04">04</ion-option>
+      <ion-option value="05">05</ion-option>
+      <ion-option value="06">06</ion-option>
+      <ion-option value="07">07</ion-option>
+      <ion-option value="08">08</ion-option>
+      <ion-option value="09">09</ion-option>
+      <ion-option value="10">10</ion-option>
+      <ion-option value="11">11</ion-option>
+      <ion-option value="12">12</ion-option>
+      <ion-option value="13">13</ion-option>
+      <ion-option value="14">14</ion-option>
+      <ion-option value="15">15</ion-option>
+      <ion-option value="16">16</ion-option>
+      <ion-option value="17">17</ion-option>
+      <ion-option value="18">18</ion-option>
+      <ion-option value="19">29</ion-option>
+      <ion-option value="20">20</ion-option>
+      <ion-option value="21">21</ion-option>
+      <ion-option value="22">22</ion-option>
+      <ion-option value="23">23</ion-option>
+      <ion-option value="24">24</ion-option>
+      <ion-option value="25">25</ion-option>
+      <ion-option value="26">26</ion-option>
+      <ion-option value="27">27</ion-option>
+      <ion-option value="28">28</ion-option>
+      <ion-option value="29">29</ion-option>
+      <ion-option value="30">30</ion-option>
+      <ion-option value="31">31</ion-option>
+    </ion-select>
+    <ion-select (ionChange)="monthChange($event)">
+      <ion-option selected="true" value="01">Janeiro</ion-option>
+      <ion-option value="02">Fevereiro</ion-option>
+      <ion-option value="03">Março</ion-option>
+      <ion-option value="04">Abril</ion-option>
+      <ion-option value="05">Maio</ion-option>
+      <ion-option value="06">Junho</ion-option>
+      <ion-option value="07">Julho</ion-option>
+      <ion-option value="08">Agosto</ion-option>
+      <ion-option value="09">Setembro</ion-option>
+      <ion-option value="10">Outubro</ion-option>
+      <ion-option value="11">Novembro</ion-option>
+      <ion-option value="12">Dezembro</ion-option>
+    </ion-select>
+    <ion-select (ionChange)="yearChange($event)">
+      <ion-option value="2010">2010</ion-option>
+      <ion-option value="2011">2011</ion-option>
+      <ion-option value="2012">2012</ion-option>
+      <ion-option value="2013">2013</ion-option>
+      <ion-option value="2014">2014</ion-option>
+      <ion-option value="2015">2015</ion-option>
+      <ion-option value="2016">2016</ion-option>
+      <ion-option value="2017">2017</ion-option>
+      <ion-option value="2018" selected="true">2018</ion-option>
+      <ion-option value="2019">2019</ion-option>
+      <ion-option value="2020"> 2020</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Hora</ion-label>
+    <ion-select (ionChange)="hourChange($event)">
+      <ion-option>01</ion-option>
+      <ion-option>02</ion-option>
+      <ion-option>03</ion-option>
+      <ion-option>04</ion-option>
+      <ion-option>05</ion-option>
+      <ion-option>06</ion-option>
+      <ion-option>07</ion-option>
+      <ion-option>08</ion-option>
+      <ion-option>09</ion-option>
+      <ion-option>10</ion-option>
+      <ion-option>11</ion-option>
+      <ion-option selected="true">12</ion-option>
+      <ion-option>13</ion-option>
+      <ion-option>14</ion-option>
+      <ion-option>15</ion-option>
+      <ion-option>16</ion-option>
+      <ion-option>17</ion-option>
+      <ion-option>18</ion-option>
+      <ion-option>19</ion-option>
+      <ion-option>20</ion-option>
+      <ion-option>21</ion-option>
+      <ion-option>22</ion-option>
+      <ion-option>23</ion-option>
+      <ion-option>24</ion-option>
+    </ion-select>
+    <ion-select (ionChange)="minuteChange($event)">
+      <ion-option selected="true">00</ion-option>
+      <ion-option>01</ion-option>
+      <ion-option>02</ion-option>
+      <ion-option>03</ion-option>
+      <ion-option>04</ion-option>
+      <ion-option>05</ion-option>
+      <ion-option>06</ion-option>
+      <ion-option>07</ion-option>
+      <ion-option>08</ion-option>
+      <ion-option>09</ion-option>
+      <ion-option>10</ion-option>
+      <ion-option>11</ion-option>
+      <ion-option>12</ion-option>
+      <ion-option>13</ion-option>
+      <ion-option>14</ion-option>
+      <ion-option>15</ion-option>
+      <ion-option>16</ion-option>
+      <ion-option>17</ion-option>
+      <ion-option>18</ion-option>
+      <ion-option>19</ion-option>
+      <ion-option>20</ion-option>
+      <ion-option>21</ion-option>
+      <ion-option>22</ion-option>
+      <ion-option>23</ion-option>
+      <ion-option>24</ion-option>
+      <ion-option>25</ion-option>
+      <ion-option>26</ion-option>
+      <ion-option>27</ion-option>
+      <ion-option>28</ion-option>
+      <ion-option>29</ion-option>
+      <ion-option>30</ion-option>
+      <ion-option>32</ion-option>
+      <ion-option>33</ion-option>
+      <ion-option>34</ion-option>
+      <ion-option>35</ion-option>
+      <ion-option>36</ion-option>
+      <ion-option>37</ion-option>
+      <ion-option>38</ion-option>
+      <ion-option>39</ion-option>
+      <ion-option>40</ion-option>
+      <ion-option>41</ion-option>
+      <ion-option>42</ion-option>
+      <ion-option>43</ion-option>
+      <ion-option>44</ion-option>
+      <ion-option>45</ion-option>
+      <ion-option>46</ion-option>
+      <ion-option>47</ion-option>
+      <ion-option>48</ion-option>
+      <ion-option>49</ion-option>
+      <ion-option>50</ion-option>
+      <ion-option>51</ion-option>
+      <ion-option>52</ion-option>
+      <ion-option>53</ion-option>
+      <ion-option>54</ion-option>
+      <ion-option>55</ion-option>
+      <ion-option>56</ion-option>
+      <ion-option>57</ion-option>
+      <ion-option>58</ion-option>
+      <ion-option>59</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Categoria</ion-label>
+    <ion-select (ionChange)="categoryChange($event)">
+      <ion-option>Pediatria</ion-option>
+      <ion-option>Obstetria</ion-option>
+      <ion-option>Ortopedia</ion-option>
+      <ion-option>Oftamologia</ion-option>
+      <ion-option>Outro</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <div>
+    <ion-input type="text" placeholder="Nome do médico" [(ngModel)]="medic"></ion-input>
+  </div>
+  <div>
+    <ion-input type="text" placeholder="Local" [(ngModel)]="location"></ion-input>
+  </div>
+
+  <div>
+    <button ion-button (click)="salvar()">Salvar</button>
+  </div>
+</ion-content>
