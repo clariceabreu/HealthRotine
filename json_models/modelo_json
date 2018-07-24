@@ -1,0 +1,50 @@
+json sample:
+{ appointments: [ {
+    professional_name: "string",
+    category: "string",
+    date: year-month-day,
+    time: minute:hour,
+    location: "string",
+    appointment_type: "string"
+    }
+]
+  medicines: [{
+    name: "string",
+    frequence: int (ex: 2 -> two times in a day),
+    date_start: day-month-year,
+    time_start: minute:hour,
+    durantion: int (in days, where 0 means every day)
+    }
+  ]
+}
+
+Enum catergories {
+    cardiology, 
+    dermatology, 
+    endocrinology, 
+    gastroenterology, 
+    geriatrics,
+    general_practitioner,
+    gynecology, 
+    immunology, 
+    neurology, 
+    obstetrics, 
+    oncology, 
+    orthopedics, 
+    pediatrics, 
+    psychiatry, 
+    radiology, 
+    urology, 
+    other
+}
+
+Enum appointment_types {
+    fisrt_meeting, 
+    emergency, 
+    routine, 
+    check_up, 
+    follow_up, 
+    other
+}
+  
+

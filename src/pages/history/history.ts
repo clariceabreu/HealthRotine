@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular/umd';
+import { Appointment } from '../../assets/models/appointment';
+import { Medicine } from '../../assets/models/medice';
+import { Exam } from '../../assets/models/exam';
 
 /**
  * Generated class for the HistoryPage page.
@@ -14,33 +17,32 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'history.html',
 })
 export class HistoryPage {
-  public day:number;
-  public month:number;
-  public year:number;
-  public hour:number;
-  public minute:number;
-  public category:string;
-  public location:string;
-  public medic:string;
-  public isVisible:boolean = true;
+  constructor(public navCtrl: NavController) {
+    var today = new Date();
 
-  constructor(public navCtrl: NavController, 
-              public navParams: NavParams) {
-
-    this.day = navParams.get('day');
-    if (this.day!=null){
-      this.month = navParams.get('month');
-      this.year = navParams.get('year');
-      this.hour = navParams.get('hour');
-      this.minute = navParams.get('minute');
-      this.category = navParams.get('category');
-      this.location = navParams.get('location');
-      this.medic = navParams.get('medic');
-      this.isVisible = false;
+    if (Appointment.appointments_list.length>0){
+      Appointment.appointments_list.forEach(item => {
+        if (item.date < today){
+          //add appoitment
+        }
+      });
     }
-    
-    
 
+    if (Medicine.medicines_list.length>0){
+      Medicine.medicines_list.forEach(item => {
+        if (item.date<today){
+          //add medicine
+        }
+      });
+    }
+
+    if (Exam.exams_list.length>0){
+      Exam.exams_list.forEach(item => {
+        if (item.date < today ){
+          //add medicine
+        }
+      });
+    }
   }
 
   ionViewDidLoad() {

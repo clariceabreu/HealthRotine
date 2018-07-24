@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular/umd';
 import { HistoryPage } from '../history/history';
+import { Appointment } from '../../assets/models/appointment';
 
 @IonicPage()
 @Component({
@@ -8,6 +9,7 @@ import { HistoryPage } from '../history/history';
   templateUrl: 'add-appointment.html',
 })
 export class AddAppointmentPage {
+  public professional_name:string;
   public day:number;
   public month:number;
   public year:number;
@@ -15,7 +17,6 @@ export class AddAppointmentPage {
   public minute:number;
   public category:string;
   public location:string = null;
-  public medic:string;
 
   private correct:boolean = true;
 
@@ -66,16 +67,8 @@ export class AddAppointmentPage {
     }
         
     if (this.correct){
-      this.navCtrl.push(HistoryPage, {
-        day: this.day,
-        month: this.month,
-        year: this.year,
-        hour: this.hour,
-        minute: this.minute,
-        category: this.category,
-        medic: this.medic,
-        location: this.location
-      } );
+      var newAppoitment = new Appointment(this.professional_name, this.category,this.day, this.month, this.year, this.hour, this.minute, this.location);
+      this.navCtrl.push(HistoryPage);
     }
   }
 
